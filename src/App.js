@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import {Routes,Route, Navigate} from "react-router-dom";
+import BlankLayout from './layouts/BlankLayout';
+import SecuredLayout from './layouts/SecuredLayout';
+import store from  './app/Store'
+import { Provider } from 'react-redux';
 function App() {
+  const ProtectedRoute =(children)=>{
+    return sessionStorage.getItem("token") ?
+    (children):(
+      <Navigate to="/login" />
+    )
+  }
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <> 
+      <Provider store={store}>
+       <Routes>
+        <Route path="/secured/*" element={<SecuredLayout/>}/>
+        <Route path="/*" element={<BlankLayout/>}/>
+      </Routes>
+      </Provider>
+      </>
   );
 }
 

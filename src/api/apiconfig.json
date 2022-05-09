@@ -1,0 +1,40 @@
+{
+    "typicodeurl":"https://jsonplaceholder.typicode.com",
+    "reqresurl":"https://reqres.in",
+    "localServerurl":" http://localhost:8000",
+
+    "typicodeApi":{
+        "post":{
+            "create": "/posts",
+            "update": "/posts",
+            "delete": "/posts",
+            "fetchOne": "/posts",
+            "fetchAll": "/posts"
+        }
+    },
+    "reqresApi":{
+        "auth":{
+            "login":"/api/login"
+
+        }
+    },
+    "localServerApi":{
+        "users":{
+            "create": "/users",
+            "update": "/users/",
+            "delete": "/users/",
+            "fetchOne": "/users/",
+            "fetchAll": "/users"
+        }
+        
+    },
+    "productsServerApi":{
+        "products":{
+            "create":"/products",
+            "update":"/products/",
+            "delete":"/products/",
+            "fetchOne":"/products/",
+            "fetchAll":"/products/"
+        }
+    }
+}
