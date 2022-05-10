@@ -2,17 +2,17 @@ import React, { useEffect,useState } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Routes,Route,useParams} from 'react-router-dom'
 import axios from "axios";
-import CategoriesListing from "../../frontend/shop/CategoriesListing";
+/*import CategoriesListing from "../../frontend/shop/CategoriesListing";
 import ProductListing from '../../frontend/shop/ProductListing';
 import ProductDetails from '../../frontend/shop/ProductDetails';
 import Product from '../../frontend/shop/Product';
-import CartIcon from './CartIcon';
+import CartIcon from './CartIcon';*/
 import { useDispatch,useSelector } from "react-redux";
 //import { selectCart } from "../../../app/Slices/CartSlice";
 
 const Shop = () => {
   
-    const [cat,setCat] = useState([]);
+   /* const [cat,setCat] = useState([]);
     const cartItems = useSelector(selectCart);
     const loadCat = () => {
         axios
@@ -46,7 +46,8 @@ const Shop = () => {
          </div>
     </div>
         
-    </> );
+    </> );*/
+    return (<>THIS IS MY SHOP</>);
 }
  
 export default Shop;
